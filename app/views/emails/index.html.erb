@@ -1,27 +1,130 @@
-<%= link_to 'Home', root_url %>
 
-<h1>Save Your Email Here</h1>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger">The Ukraine</a>
+  </div>
+</nav>
 
-<%= flash.notice %>
+<!-- Header -->
+<header class="masthead">
+  <div class="container">
+    <%= image_tag('Ruby_On_Rails_Logo.svg.png', :alt => 'Example Image') %>
+    <div class="intro-text">
+      <span class="name">GeekHub</span>
+      <hr class="star-light">
+      <span class="skills">Ruby on Rails</span>
+    </div>
+  </div>
+</header>
 
-<div class="col-form-legend">
+<!-- About Section -->
+<section class="success" id="about">
+  <div class="container">
+    <h2 class="text-center">About</h2>
+    <hr class="star-light">
+    <div class="row">
+      <div class="col-lg-4 ml-auto">
+        <p>Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.</p>
+      </div>
+      <div class="col-lg-4 mr-auto">
+        <p>Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License.</p>
+      </div>
+      <div class="col-lg-8 mx-auto text-center">
+        <a href="http://ruby-doc.org" class="btn btn-lg btn-outline">
+          Read more
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h1>Better</h1>
+<!-- Contact Section -->
+<section id='sub-form'>
+  <div class="container">
+    <h2 class="text-center">Subscribe now!</h2>
+    <hr class="star-primary">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <%= form_for(@email, :url => { :anchor => 'sub-form' }) do |f| %>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <%= f.label :name, class: 'required' %>
+                <%= f.text_field :name, class: 'form-control' %>
+                <%= error_notice(@email, :name) %>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <%= f.label :address, class: 'required' %>
+                <%= f.text_field :address, class: 'form-control' %>
+                <%= error_notice(@email, :address) %>
+              </div>
+              <div id="success"><%= flash.notice %></div>
+              <div class="form-group">
+                <%= f.submit 'Send', class: 'btn btn-success btn-lg' %>
+              </div>
+        <% end %>
+        </div>
+      </div>
+  </div>
+</section>
 
-  <%= form_for @email do |f| %>
-    <%= f.label :address, 'Your email' %>
-    <%= f.text_field :address %>
-    <%= error_messages(@email, :address) %>
-    <br />
-    <%= f.submit 'Submit' %>
-  <% end %>
-
-</div>
-
-<div>
-  <ul>
-    <% @emails.each_with_index do |email, index| %>
-      <li><%= index + 1 %> – <%= email.address %></li>
-    <% end %>
-  </ul>
-</div>
+<!-- Footer -->
+<footer class="text-center">
+  <div class="footer-above">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-4">
+          <h3>Location</h3>
+          <p>3481 Merlose Place
+            <br>BeverlyHills, CA 90210</p>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>Around the Web</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="btn-social btn-outline">
+                <i class="fa fa-fw fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-social btn-outline">
+                <i class="fa fa-fw fa-google-plus"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-social btn-outline">
+                <i class="fa fa-fw fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-social btn-outline">
+                <i class="fa fa-fw fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-social btn-outline">
+                <i class="fa fa-fw fa-dribbble"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>About Freelancer</h3>
+          <p>Freelance is a free to use, open source Bootstrap theme created by
+            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-below">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          Copyright &copy; Your Website 2017
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

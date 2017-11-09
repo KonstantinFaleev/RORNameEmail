@@ -2,17 +2,15 @@ class EmailsController < ApplicationController
 
   def index
     @email = Email.new
-    @emails = Email.all
+    #@emails = Email.all
   end
 
   def create
-
-    @email = Email.new(params.require(:email).permit(:address))
-
+    @email = Email.new(email_params)
     if @email.save
       redirect_to emails_path, notice: 'Thanks for your email. Looking forward to sending spam to you!'
     else
-      @emails = Email.all
+      #@emails = Email.all
       render :index
     end
 
@@ -29,6 +27,9 @@ class EmailsController < ApplicationController
     #   flash[:error] = "NOTE: Give a valid email!!1"
     #   render :save
     # end
+  end
+  def email_params
+    params.require(:email).permit(:name, :address)
   end
 
 end

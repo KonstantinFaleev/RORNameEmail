@@ -26,3 +26,550 @@ Processing by EmailsController#index as HTML
 Completed 200 OK in 7813ms (Views: 7781.7ms | ActiveRecord: 2.2ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToEmail (20171108202331)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "emails" ADD "name" varchar[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171108202331"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-08 22:40:13 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 22:40:13 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (296.8ms)
+  Rendered emails/index.html.erb within layouts/application (6796.3ms)
+Completed 500 Internal Server Error in 6855ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_notice' for #<#<Class:0x000000000150bdc8>:0x00000000011373c8>):
+     5:         <div class="form-group floating-label-form-group controls">
+     6:           <%= f.label :name, class: 'required' %>
+     7:           <%= f.text_field :name, class: 'form-control' %>
+     8:           <%= error_notice(@email, :name) %>
+     9:         </div>
+    10:       </div>
+    11:       <div class="control-group">
+  
+app/views/emails/_form.html.erb:8:in `block in _app_views_emails__form_html_erb__2955375418482356666_70266179771420'
+app/views/emails/_form.html.erb:3:in `_app_views_emails__form_html_erb__2955375418482356666_70266179771420'
+app/views/emails/index.html.erb:47:in `_app_views_emails_index_html_erb__1171085725196218539_11141860'
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:03:42 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (225.6ms)
+  Rendered emails/index.html.erb within layouts/application (239.3ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_notice' for #<#<Class:0x000000000150bdc8>:0x00007fd02800e380>):
+     5:         <div class="form-group floating-label-form-group controls">
+     6:           <%= f.label :name, class: 'required' %>
+     7:           <%= f.text_field :name, class: 'form-control' %>
+     8:           <%= error_notice(@email, :name) %>
+     9:         </div>
+    10:       </div>
+    11:       <div class="control-group">
+  
+app/views/emails/_form.html.erb:8:in `block in _app_views_emails__form_html_erb__2955375418482356666_70266000624980'
+app/views/emails/_form.html.erb:3:in `_app_views_emails__form_html_erb__2955375418482356666_70266000624980'
+app/views/emails/index.html.erb:47:in `_app_views_emails_index_html_erb__1171085725196218539_70266000537260'
+Started GET "/" for 127.0.0.1 at 2017-11-08 23:03:49 +0200
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:03:49 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (204.7ms)
+  Rendered emails/index.html.erb within layouts/application (208.7ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_notice' for #<#<Class:0x000000000150bdc8>:0x00007fd03e8527d8>):
+     5:         <div class="form-group floating-label-form-group controls">
+     6:           <%= f.label :name, class: 'required' %>
+     7:           <%= f.text_field :name, class: 'form-control' %>
+     8:           <%= error_notice(@email, :name) %>
+     9:         </div>
+    10:       </div>
+    11:       <div class="control-group">
+  
+app/views/emails/_form.html.erb:8:in `block in _app_views_emails__form_html_erb__2955375418482356666_70266189533920'
+app/views/emails/_form.html.erb:3:in `_app_views_emails__form_html_erb__2955375418482356666_70266189533920'
+app/views/emails/index.html.erb:47:in `_app_views_emails_index_html_erb__1171085725196218539_70266189420760'
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:04:37 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (220.6ms)
+  Rendered emails/index.html.erb within layouts/application (224.0ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_notice' for #<#<Class:0x000000000150bdc8>:0x00007fd03400b6d8>):
+     5:         <div class="form-group floating-label-form-group controls">
+     6:           <%= f.label :name, class: 'required' %>
+     7:           <%= f.text_field :name, class: 'form-control' %>
+     8:          <!-- <%= error_notice(@email, :name) %>-->
+     9:         </div>
+    10:       </div>
+    11:       <div class="control-group">
+  
+app/views/emails/_form.html.erb:8:in `block in _app_views_emails__form_html_erb__2955375418482356666_70266101282980'
+app/views/emails/_form.html.erb:3:in `_app_views_emails__form_html_erb__2955375418482356666_70266101282980'
+app/views/emails/index.html.erb:47:in `_app_views_emails_index_html_erb__1171085725196218539_70266200850560'
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:28:13 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (274.7ms)
+  Rendered emails/index.html.erb within layouts/application (285.4ms)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_notice' for #<#<Class:0x000000000150bdc8>:0x00007fd03eb31ad0>):
+    12:         <div class="form-group floating-label-form-group controls">
+    13:           <%= f.label :address, class: 'required' %>
+    14:           <%= f.text_field :address, class: 'form-control' %>
+    15:           <%= error_notice(@email, :address) %>
+    16:         </div>
+    17:       </div>
+    18:       <div id="success"><%= flash.notice %></div>
+  
+app/views/emails/_form.html.erb:15:in `block in _app_views_emails__form_html_erb__2955375418482356666_70266190883860'
+app/views/emails/_form.html.erb:3:in `_app_views_emails__form_html_erb__2955375418482356666_70266190883860'
+app/views/emails/index.html.erb:47:in `_app_views_emails_index_html_erb__1171085725196218539_70266190926420'
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:28:37 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (13.2ms)
+  Rendered emails/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 180ms (Views: 178.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:29:16 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vbKp602gZEvsySoWYJ85/AFkzRneZwY8XgejGRKDqwlIq5RfJ/+Un7aduskH0+K80gDI+V3WRVMzMYYvpZscLg==", "email"=>{"name"=>"cercrcerc", "address"=>"ercrecerc"}, "commit"=>"Send"}
+  [1m[35m (13.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (13.1ms)
+  Rendered emails/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 85ms (Views: 66.5ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:29:18 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZOZnYc5ojnV44SKdPMXSL89CrpaIQ4uAr2m4q1MVxZGR/1rVpDd+oSK1skJbiQlvHCardgvyyO/CX52d5A1ytg==", "email"=>{"name"=>"cercrcerc", "address"=>"ercrecerc"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (3.1ms)
+  Rendered emails/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:29:19 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eyB/OQPqzSZpidX4/UpiVqyB1HEkGOIIVOF1jSi7MPqOOUKNabU98jPdRSeaBrkWf+XRkaepoWc511C7n6OH3Q==", "email"=>{"name"=>"cercrcerc", "address"=>"ercrecerc"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (7.0ms)
+  Rendered emails/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:29:21 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c1/dVF9jMTDIeBPYIbq2n4f+PjGYSP+4Spj8J0b5gVyGRuDgNTzB5JIsgwdG9m3fVJo70Rv5vNcnrtkR8eE2ew==", "email"=>{"name"=>"cercrcerc", "address"=>"ercrecerc"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (4.9ms)
+  Rendered emails/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 83ms (Views: 80.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:29:26 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K4xULFl6XqfLHdYPcnmlQdVUCIamM5Sh0CtqPBXHBJzelWmYMyWuc5FJRtAVNX4BBjANZiWC1869HU8Kot+zuw==", "email"=>{"name"=>"rcrecrec", "address"=>"rcercercerc"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (3.0ms)
+  Rendered emails/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 79ms (Views: 74.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:31:22 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (2.6ms)
+  Rendered emails/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 1352ms (Views: 1350.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:31:47 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CSpXLVKtohssEsUvLAgnwniVt3mkUaF7vJIpKTQtzfP8M2qZOPJSz3ZGVfBLRPyCq/GymSfg4hTRpAwfgzV61A==", "email"=>{"name"=>"fgvrvtrv", "address"=>""}, "commit"=>"Send"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (3.9ms)
+  Rendered emails/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 61ms (Views: 50.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:31:51 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vWTs8mnySwNwijUydrbZj3CQixQ/Gi+rEkV78Sl9RVdIfdFGA6271yrepe0R+gLPo/SO9LyrbMR/c17HnmXycA==", "email"=>{"name"=>"fgvrvtrv", "address"=>"vtrvtrv"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (6.1ms)
+  Rendered emails/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-08 23:31:53 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NTOB/qG1tbZ2DFH27FmOVY+c6l80vQcMKUPCof2nwirAKrxKy+pFYixYwSmLFVUVXPjvv7cMRGNEdeeXSr91DQ==", "email"=>{"name"=>"fgvrvtrv", "address"=>"vtrvtrv"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (4.0ms)
+  Rendered emails/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:34:26 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (4.7ms)
+  Rendered emails/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1144ms (Views: 1142.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:39:02 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (441.2ms)
+  Rendered emails/index.html.erb within layouts/application (449.3ms)
+Completed 500 Internal Server Error in 454ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_notice' for #<#<Class:0x000000000150bdc8>:0x00007fd014aa56e0>):
+     5:           <div class="form-group floating-label-form-group controls">
+     6:             <%= f.label :name, class: 'required' %>
+     7:             <%= f.text_field :name, class: 'form-control' %>
+     8:             <%= error_notice(@email, :name) %>
+     9:           </div>
+    10:         </div>
+    11:         <div class="control-group">
+  
+app/views/emails/_form.html.erb:8:in `block in _app_views_emails__form_html_erb__2955375418482356666_70266201908560'
+app/views/emails/_form.html.erb:3:in `_app_views_emails__form_html_erb__2955375418482356666_70266201908560'
+app/views/emails/index.html.erb:47:in `_app_views_emails_index_html_erb__1171085725196218539_70265838317800'
+Started GET "/" for 127.0.0.1 at 2017-11-08 23:57:51 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/emails" for 127.0.0.1 at 2017-11-08 23:57:51 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/_form.html.erb (77.7ms)
+  Rendered emails/index.html.erb within layouts/application (1017.5ms)
+Completed 500 Internal Server Error in 1116ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `message' for #<Email:0x0000000002f29138>):
+    18:         <div class="control-group">
+    19:           <div class="form-group floating-label-form-group controls">
+    20:             <%= f.label :message %>
+    21:             <%= f.text_area :message, class: 'form-control' %>
+    22:           </div>
+    23:         </div>
+    24:         <div id="success"><%= flash.notice %></div>
+  
+app/views/emails/_form.html.erb:21:in `block in _app_views_emails__form_html_erb__2634189817158732120_69827999735300'
+app/views/emails/_form.html.erb:3:in `_app_views_emails__form_html_erb__2634189817158732120_69827999735300'
+app/views/emails/index.html.erb:47:in `_app_views_emails_index_html_erb___2253079160158908608_24558700'
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 00:03:25 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (396.6ms)
+Completed 200 OK in 577ms (Views: 536.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 00:05:00 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (281.2ms)
+Completed 500 Internal Server Error in 334ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error_notice' for #<#<Class:0x00000000035c6810>:0x000000000112f790>):
+    51:               <div class="form-group floating-label-form-group controls">
+    52:                 <%= f.label :name, class: 'required' %>
+    53:                 <%= f.text_field :name, class: 'form-control' %>
+    54:                 <%= error_notice(@email, :name) %>
+    55:               </div>
+    56:             </div>
+    57:             <div class="control-group">
+  
+app/views/emails/index.html.erb:54:in `block in _app_views_emails_index_html_erb__1057478576709601712_12748840'
+app/views/emails/index.html.erb:49:in `_app_views_emails_index_html_erb__1057478576709601712_12748840'
+Started GET "/" for 127.0.0.1 at 2017-11-09 00:31:46 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 00:31:46 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (628.0ms)
+Completed 200 OK in 795ms (Views: 748.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 00:47:33 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 236ms (Views: 221.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 00:53:36 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 00:54:21 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HDirAjKkL3QrwrQzV/jUK0tguuEo4COrFCMSeqvDy6jjgnKR+pnm4KRNhi2mqWTv/ubhBhaEd7vL/kMc2Z/dTA==", "email"=>{"name"=>"", "address"=>"fghj"}, "commit"=>"Send"}
+  [1m[35m (5.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 55ms (Views: 43.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 00:57:37 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (175.1ms)
+Completed 200 OK in 266ms (Views: 265.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 01:16:14 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 99ms (Views: 78.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 01:16:18 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7S+b42a79tg/CHjA/fN0z/D/LQY9Q0uldi1fr2kkEigSlUJwroY/TLCHSt4MosQLRXl24QMnH7Wp8A7JG3gEzA==", "email"=>{"name"=>"", "address"=>""}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 60ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 01:16:28 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x/UH47mKUpzG5MwJJqP4ePZHQA2itoKiciclRcPQ76c4T95wcbebCElr/hfX8ki8Q8Eb6pzS1rKt+nQjsYz5Qw==", "email"=>{"name"=>"", "address"=>""}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:16:39 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:17:41 +0200
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 01:17:41 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 41ms (Views: 28.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 01:17:44 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HAjJ//VZ/ezXWvsQ0pBWzOVqcKcS5CVgjqsYKRBBH4zjshBsPWQ0eFjVyQ4jweYIUOwrQCyAcXBRdklPYh0JaA==", "email"=>{"name"=>"", "address"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 68ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 01:30:12 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 56ms (Views: 40.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 01:34:57 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 01:34:58 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 01:34:59 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:35:08 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:35:44 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:35:45 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 01:35:47 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BXrbweyy5gsWlD7XfTSsqmzo+rgAcPS87GU+C+taO8b6wAJSJI8vn5kbDMmMZRxu2W6hXz4UoKwzuG9tmQYtIg==", "email"=>{"name"=>"", "address"=>""}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:39:01 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 01:39:11 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zaMnFg1uhwEr1ZpQSadrnvVYQrBCLvIkskbK6vhwc2IyGf6FxVNOlaRaqE649ttaQN4ZV3xKpjRtm5uMiixlhg==", "email"=>{"name"=>"", "address"=>""}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 62ms (Views: 56.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:42:18 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (521.3ms)
+Completed 200 OK in 755ms (Views: 722.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 01:48:17 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 02:06:12 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 73ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 02:06:38 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (459.5ms)
+Completed 200 OK in 599ms (Views: 558.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 02:06:43 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3AG1oQbonSbWvDhkp+W1EbL2wqPY4FycswMUppoKaOIju2wyztVUslkzCnpWtAXVB3CZROaECIxs3kXA6FZ+Bg==", "email"=>{"name"=>"sxsxs", "address"=>""}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 84ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 02:06:49 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPeou1lgWFx8tPjO1A8bkwpZjs1FHO1LYkDDN72lvXrfTXEokV2RyPM7ytAlXqtXv9/VKnt4uVu9nZJRz/mrng==", "email"=>{"name"=>"sxsxs", "address"=>"mhbn,k,m,"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 02:14:59 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 02:15:03 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 02:15:03 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 02:17:18 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 131ms (Views: 128.3ms | ActiveRecord: 0.0ms)
+
+
