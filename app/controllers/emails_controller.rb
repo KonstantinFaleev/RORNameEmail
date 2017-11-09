@@ -6,7 +6,7 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.new(email_params)
+    @email = Email.new(params.require(:email).permit(:name, :address))
     if @email.save
       redirect_to emails_path, notice: 'Thanks for your email. Looking forward to sending spam to you!'
     else
@@ -28,8 +28,6 @@ class EmailsController < ApplicationController
     #   render :save
     # end
   end
-  def email_params
-    params.require(:email).permit(:name, :address)
-  end
+
 
 end

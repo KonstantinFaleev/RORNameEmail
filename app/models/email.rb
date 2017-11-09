@@ -1,5 +1,6 @@
 class Email < ApplicationRecord
-  validates :name, presence: true
-  validates :address, format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :address, format: { with: VALID_EMAIL_REGEX }, presence: true
 
 end

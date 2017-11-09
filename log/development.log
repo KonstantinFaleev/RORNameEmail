@@ -573,3 +573,48 @@ Processing by EmailsController#index as HTML
 Completed 200 OK in 131ms (Views: 128.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-09 08:50:23 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (531.7ms)
+Completed 200 OK in 641ms (Views: 585.4ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 08:50:29 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9eWXnplydv2MxZ6L+9FB6wcgQApgjNnaG5lPHt3m7GVtowWd1RW8foh/d4lTl6EIH78AQcDTvnnD1EGsSZwOg==", "email"=>{"name"=>"", "address"=>"sdfghjkl;"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 83ms (Views: 62.4ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 08:50:37 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W50qDgkkjEulbuyWk5iryM8A5IZy63ItBrRSIwGSLytZ/DBGBBUTYal8BzKZObBLQ2KZh1xqD7OJ1WYZy8PEoA==", "email"=>{"name"=>"asdfghjkl;'asdfghjkl;'", "address"=>"sdfghjkl;"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2017-11-09 08:51:10 +0200
+Processing by EmailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yLiy+EbT7F7YHo4pYjjq282YREU1+1X2LSI8LOUk0xrK2aiwS+JzdNQMZY1omfFYQfo5RBt6KGiiQwgWL3U4kQ==", "email"=>{"name"=>"Konstantin", "address"=>"konstantin.faleev@gmail.com"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "emails" ("address", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?)[0m  [["address", "konstantin.faleev@gmail.com"], ["created_at", "2017-11-09 06:51:10.115807"], ["updated_at", "2017-11-09 06:51:10.115807"], ["name", "Konstantin"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/emails
+Completed 302 Found in 21ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/emails" for 127.0.0.1 at 2017-11-09 08:51:10 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 36ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
